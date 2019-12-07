@@ -1,0 +1,78 @@
+
+package chriXCode;
+
+/**
+ *
+ * @author KKK
+ */
+import java.util.Scanner;
+
+public class SimulataneousEquation {
+    public static void main (String [] args){
+    int det0, det1,det2,det3;
+    float x,y,z;
+    Scanner in = new Scanner(System.in);
+    System.out.println("How many variables does each of your equations contain");
+   int var1 = in.nextInt();
+    if (var1 > 2){
+        System.out.println("What is the coefficient of x in equation 1");
+        int a1 = in.nextInt();
+        System.out.println("What is the coefficient of y in equation 1");
+        int b1 = in.nextInt();
+        System.out.println("What is the coefficient of z in equation 1");
+        int c1 = in.nextInt();
+        System.out.println("what is the result of equation 1");
+        int d1 = in.nextInt();
+        System.out.println("What is the coefficient of x in equation 2");
+        int a2 = in.nextInt();
+        System.out.println("What is the coefficient of y in equation 2");
+        int b2 = in.nextInt();
+        System.out.println("What is the coefficient of z in equation 2");
+        int c2 = in.nextInt();
+        System.out.println("what is the result of equation 2");
+        int d2 = in.nextInt();
+        System.out.println("What is the coefficient of x in equation 3");
+        int a3 = in.nextInt();
+        System.out.println("What is the coefficient of y in equation 3");
+        int b3 = in.nextInt();
+        System.out.println("What is the coefficient of z in equation 3");
+        int c3 = in.nextInt();
+        System.out.println("what is the result of equation 3");
+        int d3 = in.nextInt();
+        
+        det0 = (a1*(b2*c3-b3*c2))-(b1*(a2*c3-c2*a3))+(c1*(a2*b3-b2*a3));
+        det1 = (b1*(c2*d3-d2*c3))-(c1*(b2*d3-d2*b3))+(d1*(b2*c3-c2*b3));
+        det2 = (a1*(c2*d3-d2*c3))-(c1*(a2*d3-d2*a3))+(d1*(a2*c3-c2*a3));
+        det3 = (a1*(b2*d3-d2*b3))-(b1*(a2*d3-d2*a3))+(d1*(a2*b3-b2*a3));
+        
+        x=det1/det0;
+        y=-det2/det0;
+        z=det3/det0;
+        System.out.println("the values of x, y and z are "+ x+ ", "+y+", and "+z+ " respectively");
+        System.out.println("THANKS FOR CHECKING");
+    }
+    else
+        System.out.println("What is the coefficient of x in equation 1");
+        int p1 = in.nextInt();
+        System.out.println("What is the coefficient of y in equation 1");
+        int q1 = in.nextInt();
+        System.out.println("what is the result of equation 1");
+        int r1 = in.nextInt();
+        System.out.println("What is the coefficient of x in equation 2");
+        int p2 = in.nextInt();
+        System.out.println("What is the coefficient of y in equation 2");
+        int q2 = in.nextInt();
+        System.out.println("what is the result of equation 2");
+        int r2 = in.nextInt();
+        
+        det0 = (p1*q2)-(q1*p2);
+        det1 = (q1*r2)-(r1*q2);
+        det2 = (p1*r2)-(r1*p2);
+        
+        x = (-1*det1)/det0;
+        y = det2/det0;
+        System.out.println("The values of x and y are "+ x+ "and "+y +" respectively");
+        System.out.println("THANKS FOR CHECKING");
+    }
+    
+}
